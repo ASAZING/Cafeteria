@@ -28,7 +28,7 @@
                         <a class="nav-link active" aria-current="page" href="index.php?controller=productController&action=list">Lista de produtos</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="index.php?controller=storeController&action=show">Tienda</a>
+                        <a class="nav-link" href="index.php?controller=StoreController&action=show">Tienda</a>
                         </li>
                     </ul>
                     </div>

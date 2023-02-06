@@ -85,6 +85,18 @@ class Product {
 
 	}
 
+	/* Guardar Producto */
+	public function updateStockById($producId, $newStock){
+		$this->getConection();
+
+		$sql = "UPDATE ".$this->table. " SET stock = ? WHERE id=?";
+		$stmt = $this->conection->prepare($sql);
+		$res = $stmt->execute([ $newStock, $producId]);
+		
+		return $producId;	
+
+	}
+
 	/* Eliminar prodcto por id */
 	public function deleteProductById($id){
 		$this->getConection();

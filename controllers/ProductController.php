@@ -1,6 +1,6 @@
 <?php 
 
-require_once 'Models/product.php';
+require_once 'Models/Product.php';
 
 class ProductController{
 	public $page_title;
@@ -20,14 +20,14 @@ class ProductController{
 	}
 
 	/* Cargar productos para editar */
-	public function edit(){
-		$this->page_title = $_GET["id"] ? 'Editar producto' : 'Crear Producto';
+	public function edit($id = null){
+		$this->page_title = isset($_GET["id"]) ? 'Editar producto' : 'Crear Producto';
 		$this->view = 'edit_product';
 		if(isset($_GET["id"])) $id = $_GET["id"];
 			return $this->productObj->getProductById($id);
 	}
 
-	/* Crear o actulizar un producto */
+	/* Crear o actualizar un producto */
 	public function save(){
 		$this->view = 'edit_product';
 		$this->page_title = 'Editar producto';
