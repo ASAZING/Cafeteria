@@ -19,12 +19,12 @@ if(isset($dataToView["data"]["errors"])) $errors  = $dataToView["data"]["errors"
 	if(isset($_GET["response"]) and $_GET["response"] === true){
 		?>
 		<div class="alert alert-success">
-			Operación realizada correctamente. <a href="index.php?controller=productcontroller&action=list">Volver al listado</a>
+			Operación realizada correctamente. <a href="index.php?controller=productController&action=list">Volver al listado</a>
 		</div>
 		<?php
 	}
 	?>
-	<form class="form" action="index.php?controller=productcontroller&action=save" method="POST">
+	<form class="form" action="index.php?controller=productController&action=save" method="POST">
 		<input type="hidden" name="id" value="<?php echo $id; ?>" />
 		<div class="form-group">
 			<label>Producto <span class="text-danger">* <?php echo isset($_GET["errors"]['name']) ? $_GET["errors"]['name'] : '';?></span></label>
@@ -53,9 +53,9 @@ if(isset($dataToView["data"]["errors"])) $errors  = $dataToView["data"]["errors"
 		</div>
         <div class="form-group mb-2">
 			<label>Fecha de creacion <span class="text-danger">* <?php echo isset($_GET["errors"]['created_at']) ? $_GET["errors"]['created_at'] : '';?></span></label>
-            <input type="datetime" class="form-control" type="text" name="created_at" value="<?php echo $created_at; ?>" />
+            <input class="form-control" type="datetime-local" id="created_at" name="created_at" value="<?php echo $created_at; ?>" >
 		</div>
 		<input type="submit" value="Guardar" class="btn btn-primary"/>
-		<a class="btn btn-outline-danger" href="index.php?controller=productcontroller&action=list">Cancelar</a>
+		<a class="btn btn-outline-danger" href="index.php?controller=productController&action=list">Cancelar</a>
 	</form>
 </div>

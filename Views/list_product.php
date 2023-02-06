@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="col-md-12 text-right">
-		<a href="index.php?controller=productcontroller&action=edit" class="btn btn-outline-primary">Crear Producto</a>
+		<a href="index.php?controller=productController&action=edit" class="btn btn-outline-primary">Crear Producto</a>
 		<hr/>
 	</div>
 	<?php
@@ -15,8 +15,8 @@
 					<div class="card-text">Presio : $<?php echo nl2br($product['price']); ?></div>
 					<div class="card-text">Stock : <?php echo nl2br($product['stock']); ?></div>
 					<hr class="mt-1"/>
-					<a href="index.php?controller=productcontroller&action=edit&id=<?php echo $product['id']; ?>" class="btn btn-primary">Editar</a>
-					<a href="index.php?controller=productcontroller&action=confirmDelete&id=<?php echo $product['id']; ?>" class="btn btn-danger">Eliminar</a>
+					<a href="index.php?controller=productController&action=edit&id=<?php echo $product['id']; ?>" class="btn btn-primary">Editar</a>
+					<a href="index.php?controller=productController&action=confirmDelete&id=<?php echo $product['id']; ?>" class="btn btn-danger">Eliminar</a>
 				</div>
 			</div>
 			<?php

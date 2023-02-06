@@ -20,8 +20,8 @@ class ProductController{
 	}
 
 	/* Cargar productos para editar */
-	public function edit($id = null){
-		$this->page_title = 'Editar producto';
+	public function edit(){
+		$this->page_title = $_GET["id"] ? 'Editar producto' : 'Crear Producto';
 		$this->view = 'edit_product';
 		if(isset($_GET["id"])) $id = $_GET["id"];
 			return $this->productObj->getProductById($id);
