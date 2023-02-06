@@ -41,15 +41,15 @@ if(isset($dataToView["data"]["errors"])) $errors  = $dataToView["data"]["errors"
 		</div>
         <div class="form-group mb-2">
 			<label>Stock <span class="text-danger">* <?php echo isset($_GET["errors"]['stock']) ? $_GET["errors"]['stock'] : '';?></span></label>
-            <input class="form-control" type="text" name="stock" value="<?php echo $stock; ?>" />
+            <input class="form-control" type="number" name="stock" value="<?php echo $stock; ?>" />
 		</div>
         <div class="form-group mb-2">
 			<label>Presio <span class="text-danger">* <?php echo isset($_GET["errors"]['price']) ? $_GET["errors"]['price'] : '';?></span></label>
-            <input required class="form-control" type="text" name="price" value="<?php echo $price; ?>" />
+            <input required class="form-control" type="number" name="price" value="<?php echo $price; ?>" />
 		</div>
         <div class="form-group mb-2">
 			<label>Peso <span class="text-danger">* <?php echo isset($_GET["errors"]['weight']) ? $_GET["errors"]['weight'] : '';?></span></label>
-            <input class="form-control" type="text" name="weight" value="<?php echo $weight; ?>" />
+            <input class="form-control" type="number" name="weight" value="<?php echo $weight; ?>" />
 		</div>
         <div class="form-group mb-2">
 			<label>Fecha de creacion <span class="text-danger">* <?php echo isset($_GET["errors"]['created_at']) ? $_GET["errors"]['created_at'] : '';?></span></label>
